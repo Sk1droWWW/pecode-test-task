@@ -25,6 +25,7 @@ class NotificationsLogic(private val context: Context) {
         )
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
+            .setAutoCancel(true)
             .setContentTitle(context.resources.getString(R.string.notification_title))
             .setContentText(context.resources.getString(R.string.notification_text) + id)
             .setContentIntent(contentIntent)
