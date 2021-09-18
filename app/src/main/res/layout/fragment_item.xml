@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/create_notification_btn"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="143dp"
+
+        app:cardBackgroundColor="#33BABF"
+        app:cardCornerRadius="166dp"
+        app:cardElevation="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:text="@string/new_notification_btn_text"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragment_count_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="35dp"
+
+        app:cardBackgroundColor="@color/elements_background_color"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/fragment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:text="1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/remove_fragment"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+
+        app:cardBackgroundColor="@color/fragments_control_btn_background"
+        app:cardCornerRadius="56dp"
+        app:cardElevation="6dp"
+
+        app:layout_constraintStart_toStartOf="@id/fragment_count_view"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_count_view"
+        app:layout_constraintTop_toTopOf="@id/fragment_count_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/minus"
+            android:layout_gravity="center"
+            android:contentDescription="@string/remove_fragment_content_description">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/create_fragment"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+
+        app:cardBackgroundColor="@color/fragments_control_btn_background"
+        app:cardCornerRadius="56dp"
+        app:cardElevation="6dp"
+
+        app:layout_constraintEnd_toEndOf="@id/fragment_count_view"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_count_view"
+        app:layout_constraintTop_toTopOf="@id/fragment_count_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plus"
+            android:layout_gravity="center"
+            android:contentDescription="@string/create_fragment_content_description">
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
