@@ -8,13 +8,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/create_notification_btn"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="143dp"
+        android:layout_width="@dimen/notification_btn_size"
+        android:layout_height="@dimen/notification_btn_size"
+        android:layout_marginTop="@dimen/notification_btn_top_margin"
 
-        app:cardBackgroundColor="#33BABF"
-        app:cardCornerRadius="166dp"
-        app:cardElevation="15dp"
+        app:cardBackgroundColor="@color/notification_btn_background"
+        app:cardCornerRadius="@dimen/notification_btn_corner_radius"
+        app:cardElevation="@dimen/notification_btn_elevation"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
 
             android:text="@string/new_notification_btn_text"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/notification_btn_text_size"
 
             android:gravity="center"
             android:layout_gravity="center"/>
@@ -38,16 +38,16 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/fragment_count_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/fragment_counter_height"
 
         android:gravity="center"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginStart="@dimen/fragment_counter_margin_sides"
+        android:layout_marginEnd="@dimen/fragment_counter_margin_sides"
+        android:layout_marginBottom="@dimen/fragment_counter_margin_bottom"
 
         app:cardBackgroundColor="@color/elements_background_color"
-        app:cardCornerRadius="50dp"
-        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/fragment_counter_corner_radius"
+        app:cardElevation="@dimen/fragment_counter_elevation"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
 
             android:layout_gravity="center"
             android:textColor="@color/text_color"
-            android:textSize="24sp"
+            android:textSize="@dimen/fragment_number_size"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,12 +73,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/remove_fragment"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/control_buttons_size"
+        android:layout_height="@dimen/control_buttons_size"
 
         app:cardBackgroundColor="@color/fragments_control_btn_background"
-        app:cardCornerRadius="56dp"
-        app:cardElevation="6dp"
+        app:cardCornerRadius="@dimen/control_buttons_size"
+        app:cardElevation="@dimen/control_buttons_elevation"
 
         app:layout_constraintStart_toStartOf="@id/fragment_count_view"
         app:layout_constraintBottom_toBottomOf="@id/fragment_count_view"
@@ -95,12 +95,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/create_fragment"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/control_buttons_size"
+        android:layout_height="@dimen/control_buttons_size"
 
         app:cardBackgroundColor="@color/fragments_control_btn_background"
-        app:cardCornerRadius="56dp"
-        app:cardElevation="6dp"
+        app:cardCornerRadius="@dimen/control_buttons_size"
+        app:cardElevation="@dimen/control_buttons_elevation"
 
         app:layout_constraintEnd_toEndOf="@id/fragment_count_view"
         app:layout_constraintBottom_toBottomOf="@id/fragment_count_view"

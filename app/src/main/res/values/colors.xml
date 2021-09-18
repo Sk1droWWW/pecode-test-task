@@ -11,4 +11,5 @@
     <color name="elements_background_color">#49C0BD</color>
     <color name="fragments_control_btn_background">#FFFFFF</color>
     <color name="fragment_background_color">#02AAB0</color>
+    <color name="notification_btn_background">#33BABF</color>
 </resources>
