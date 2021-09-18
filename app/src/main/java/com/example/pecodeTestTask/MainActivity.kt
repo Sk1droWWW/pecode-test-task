@@ -6,12 +6,14 @@ import android.os.Bundle
 import com.example.pecodeTestTask.databinding.ActivityMainBinding
 import com.example.pecodeTestTask.item.OnItemFragmentListener
 
-private const val NOTIFICATIONS_ID = "number"
+
+const val NOTIFICATIONS_ID = "number"
 
 class MainActivity : AppCompatActivity(), OnItemFragmentListener {
 
     private lateinit var activityMainBinding: ActivityMainBinding
     private var viewPagerAdapter: ViewPagerAdapter? = null
+    private var notification: NotificationsLogic? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +50,23 @@ class MainActivity : AppCompatActivity(), OnItemFragmentListener {
         viewPagerAdapter?.removeFragment(activityMainBinding.viewPager)
     }
 
+    override fun createNotification(id: Int?) {
+        if (notification == null) {
+            notification = NotificationsLogic(this)
+        }
+        id?.let { notification?.create(it) }
+    }
+
+    override fun removeNotification(id: Int?) {
+        notification?.remove(id)
+    }
+
     private fun getCurrentItemNumber(): Int {
         return intent.getIntExtra(NOTIFICATIONS_ID, viewPagerAdapter!!.count) - 1
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        notification = null
     }
 }

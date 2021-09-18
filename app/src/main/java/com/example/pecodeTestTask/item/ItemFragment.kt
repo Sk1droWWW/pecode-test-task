@@ -55,23 +55,28 @@ class ItemFragment : Fragment() {
     }
 
     private fun bindViews() {
+        fragmentItemBinding.createNotificationBtn.setOnClickListener{ createNotificationOnClick()}
+        fragmentItemBinding.removeFragment.setOnClickListener{ removeBtnOnClick() }
+        fragmentItemBinding.createFragment.setOnClickListener{ createBtnOnClick() }
+
+        fragmentItemBinding.fragmentNumber.text = fragmentNumber.toString()
         fragmentItemBinding.removeFragment.visibility =
             if (fragmentNumber != 1) {
                 View.VISIBLE
             } else {
                 View.GONE
             }
+    }
 
-        fragmentItemBinding.removeFragment.setOnClickListener{ removeBtnOnClick() }
-        fragmentItemBinding.createFragment.setOnClickListener{ createBtnOnClick() }
-
-        fragmentItemBinding.fragmentNumber.text = fragmentNumber.toString()
+    private fun createNotificationOnClick() {
+        onItemFragmentListener?.createNotification(fragmentNumber)
     }
 
     private fun createBtnOnClick() {
         onItemFragmentListener?.addFragment()
     }
     private fun removeBtnOnClick() {
+        onItemFragmentListener?.removeNotification(fragmentNumber)
         onItemFragmentListener?.removeFragment()
     }
 

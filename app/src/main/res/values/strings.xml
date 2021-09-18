@@ -3,4 +3,7 @@
     <string name="new_notification_btn_text">Create new notification</string>
     <string name="create_fragment_content_description">plus</string>
     <string name="remove_fragment_content_description">minus</string>
+    <string name="notification_channel_name">pecode_test_task_notification_chanel</string>
+    <string name="notification_text">"Notification "</string>
+    <string name="notification_title">Chat heads active</string>
 </resources>
