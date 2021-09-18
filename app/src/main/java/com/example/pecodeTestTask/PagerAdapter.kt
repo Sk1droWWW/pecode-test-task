@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.pecodeTestTask.item.ItemFragment
 import java.util.ArrayList
 
 class ViewPagerAdapter(fm: FragmentManager, count: Int) :

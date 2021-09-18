@@ -3,14 +3,12 @@ package com.example.pecodeTestTask
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.example.pecodeTestTask.databinding.ActivityMainBinding
-import com.example.pecodeTestTask.databinding.FragmentItemBinding
+import com.example.pecodeTestTask.item.OnItemFragmentListener
 
 private const val NOTIFICATIONS_ID = "number"
 
-class MainActivity : AppCompatActivity(), ItemFragment.OnItemFragmentListener {
+class MainActivity : AppCompatActivity(), OnItemFragmentListener {
 
     private lateinit var activityMainBinding: ActivityMainBinding
     private var viewPagerAdapter: ViewPagerAdapter? = null

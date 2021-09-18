@@ -1,4 +1,4 @@
-package com.example.pecodeTestTask
+package com.example.pecodeTestTask.item
 
 import android.content.Context
 import android.os.Bundle
@@ -85,11 +85,6 @@ class ItemFragment : Fragment() {
                         + " must implement OnItemFragmentListener"
             )
         }
-    }
-
-    interface OnItemFragmentListener {
-        fun addFragment()
-        fun removeFragment()
     }
 
     override fun onDetach() {
