@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.pecodeTestTask.databinding.FragmentItemBinding
-import java.lang.RuntimeException
 
 class ItemFragment : Fragment() {
 
@@ -55,9 +54,9 @@ class ItemFragment : Fragment() {
     }
 
     private fun bindViews() {
-        fragmentItemBinding.createNotificationBtn.setOnClickListener{ createNotificationOnClick()}
-        fragmentItemBinding.removeFragment.setOnClickListener{ removeBtnOnClick() }
-        fragmentItemBinding.createFragment.setOnClickListener{ createBtnOnClick() }
+        fragmentItemBinding.createNotificationBtn.setOnClickListener { createNotificationOnClick() }
+        fragmentItemBinding.removeFragment.setOnClickListener { removeBtnOnClick() }
+        fragmentItemBinding.createFragment.setOnClickListener { createBtnOnClick() }
 
         fragmentItemBinding.fragmentNumber.text = fragmentNumber.toString()
         fragmentItemBinding.removeFragment.visibility =
@@ -75,6 +74,7 @@ class ItemFragment : Fragment() {
     private fun createBtnOnClick() {
         onItemFragmentListener?.addFragment()
     }
+
     private fun removeBtnOnClick() {
         onItemFragmentListener?.removeNotification(fragmentNumber)
         onItemFragmentListener?.removeFragment()

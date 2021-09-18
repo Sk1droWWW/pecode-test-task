@@ -1,8 +1,8 @@
 package com.example.pecodeTestTask
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.pecodeTestTask.databinding.ActivityMainBinding
 import com.example.pecodeTestTask.item.OnItemFragmentListener
 
